@@ -232,4 +232,18 @@ declare module "vitest" {
   }
 }
 
+declare module "@vitest/expect" {
+  interface Assertion {
+    toBeInActionStateWhile(
+      actionState: string,
+      dispatchFn: (...args: any[]) => Promise<any>,
+      ...args: any[]
+    ): Promise<MatcherResult>;
+    toHaveEmittedTimes(times: number, event: string): MatcherResult;
+    toHaveEmittedOnce(event: string): MatcherResult;
+    toHaveEmittedOnceWith(event: string, ...expected: any[]): MatcherResult;
+    toHaveClasses(classes: string, hasClasses?: boolean): MatcherResult;
+  }
+}
+
 export type MockRoute = Partial<RouteLocationNormalizedLoaded>;
