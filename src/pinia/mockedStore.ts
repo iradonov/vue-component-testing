@@ -7,9 +7,7 @@ export type WritableGetters<Getters> = {
 };
 
 export type MockActions<Actions> = {
-  [A in keyof Actions]: Actions[A] extends (...args: any) => any
-    ? Mock<Actions[A]>
-    : Actions[A];
+  [A in keyof Actions]: Actions[A] extends Fn ? Mock<Actions[A]> : Actions[A];
 };
 
 export default function mockedStore<TStore>(
