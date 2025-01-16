@@ -1,4 +1,3 @@
-/* eslint-disable jest/no-conditional-in-test */
 import { DOMWrapper } from "@vue/test-utils";
 import {
   TestCaseAttribute,

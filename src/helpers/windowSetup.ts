@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+// @ts-expect-error Replace with custom implementation
 import matchMediaPolyfill from "mq-polyfill";
 
 if (typeof window !== "undefined") {

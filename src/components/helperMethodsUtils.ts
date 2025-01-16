@@ -95,8 +95,7 @@ function findComponentSelector(wrapper: VueWrapper, selector: TestSelector) {
 function getSelectorName(selector: TestSelector) {
   return typeof selector === "string"
     ? selector
-    : // eslint-disable-next-line no-underscore-dangle
-      selector.name ?? selector.__name;
+    : selector.name ?? selector.__name;
 }
 
 export {

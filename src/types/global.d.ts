@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, no-var, vars-on-top */
 declare global {
   interface Fn<T = any> {
     (...arg: T[]): T;

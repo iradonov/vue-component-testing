@@ -1,22 +1,4 @@
 import { VueWrapper } from "@vue/test-utils";
-import { StoreGeneric } from "pinia";
-
-/* eslint-disable-next-line max-params */
-async function toBeInActionStateWhile(
-  store: StoreGeneric,
-  actionState: string,
-  dispatchFn: (...args: any[]) => Promise<unknown>,
-  ...args: any[]
-) {
-  const promise = dispatchFn(...args);
-  const pass = store.actionState === actionState;
-  await promise;
-  return {
-    pass,
-    message: () =>
-      `Expected ${store.$id}.actionState to be ${actionState} but got "${store.actionState}"`,
-  };
-}
 
 function toHaveClasses(
   received: VueWrapper,
@@ -35,6 +17,5 @@ function toHaveClasses(
 }
 
 export default {
-  toBeInActionStateWhile,
   toHaveClasses,
 };

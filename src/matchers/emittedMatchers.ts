@@ -31,7 +31,6 @@ function getMatcherHint(matcherHint: MatcherHint) {
   });
 }
 
-// eslint-disable-next-line max-params
 function assertPayload(
   received: VueWrapper,
   event: string,
